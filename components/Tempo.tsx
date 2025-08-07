@@ -49,16 +49,16 @@ export default function Tempo({date, max, min, description, condition, moon_phas
                 <Text style={styles.texto}>Mín: {min}</Text>
                 <Text style={styles.texto}>Descrição: {description}</Text>
                 <View style={styles.colection}>
-                <Image 
-                style={styles.imagem}
-                source={icones[condition]}
-   
-                /> 
-                <Image 
-                style={styles.imagem2}
-                source={luas[moon_phase]}
+                    <Image 
+                    style={styles.imagem}
+                    source={icones[condition]}
+    
+                    /> 
+                    <Image 
+                    style={styles.imagem2}
+                    source={luas[moon_phase]}
 
-                />
+                    />
                 </View>
 
         </View>

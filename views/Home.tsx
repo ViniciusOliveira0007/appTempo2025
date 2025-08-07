@@ -20,6 +20,24 @@ export default function Home(){
                 >
                     <Text style={styles.textoBtn}>Itanhaém</Text>
                 </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Mongagua' as never)}
+                >
+                    <Text style={styles.textoBtn}>Mongagua</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Santos' as never)}
+                >
+                    <Text style={styles.textoBtn}>Santos</Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>navigation.navigate('Campinas' as never)}
+                >
+                    <Text style={styles.textoBtn}>Campinas</Text>
+                </TouchableOpacity>
         </View>
     );
 } 
