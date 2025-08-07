@@ -1,3 +1,4 @@
+import React from 'react';
 import {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import Tempo from '../components/Tempo';
@@ -7,7 +8,7 @@ export default function Itanhaem(){
     const [dados, setDados] = useState<any[]>([]);
 
     async function buscaTempo(){
-        const response = await Api.get('weather?array_limit=3&fields=only_results,temp,city_name,forecast,condition,max,min,description,date&key=6c77a5ae&city_name=Itanhaem,SP');
+        const response = await Api.get('weather?array_limit=6&fields=only_results,temp,city_name,forecast,condition,max,min,moon_phase,description,date&key=6c77a5ae&city_name=Itanhaem,SP');
         setDados(response.data.forecast);
     }
     useEffect(
@@ -23,7 +24,7 @@ export default function Itanhaem(){
                 keyExtractor={(item)=>item.date}
                 renderItem={({item})=> <Tempo date={item.date} 
                 max={item.max} min={item.min} description={item.description} 
-                condition={item.condition} />}
+                condition={item.condition} moon_phase={item.moon_phase} />}
                 style={styles.lista}
             />
         </View>

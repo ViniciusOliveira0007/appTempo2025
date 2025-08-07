@@ -1,3 +1,4 @@
+import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 import {
@@ -5,6 +6,7 @@ import {
     useNavigation,
   } from '@react-navigation/native';
   import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 export default function Home(){
     const navigation = useNavigation();
